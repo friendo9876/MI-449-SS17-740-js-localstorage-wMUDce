@@ -20,7 +20,7 @@ function localStorageValuesWhenLoadedFunction () {
     dayNightToggle.innerHTML = 'Toggle Day Theme'
   }
   if (counter === null) {
-    counter = 0
+    counter = 1
     document.getElementById('counter').innerHTML = counter
     window.localStorage.setItem('counter', counter)
   } else {

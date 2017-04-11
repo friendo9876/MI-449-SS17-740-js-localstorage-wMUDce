@@ -21,13 +21,11 @@ function localStorageValuesWhenLoadedFunction () {
   }
   if (counter === null) {
     counter = 1
-    document.getElementById('counter').innerHTML = counter
-    window.localStorage.setItem('counter', counter)
   } else {
     counter = parseInt(counter) + 1
-    window.localStorage.setItem('counter', counter)
-    document.getElementById('counter').innerHTML = counter
   }
+  window.localStorage.setItem('counter', counter)
+  document.getElementById('counter').innerHTML = counter
 }
 function dayNightToggleFunction () {
   if (document.body.className === 'night-theme') {
@@ -36,7 +34,7 @@ function dayNightToggleFunction () {
     bodyId = 'day-theme'
     window.localStorage.setItem('body', bodyId)
     console.log(window.localStorage.valueOf())
-  } else if (document.body.className === 'day-theme') {
+  } else {
     document.body.className = 'night-theme'
     dayNightToggle.innerHTML = 'Toggle Day Theme'
     bodyId = 'night-theme'
